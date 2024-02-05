@@ -6,10 +6,9 @@ const ProductList = ({ products, onAddToCart }) => (
     {products.map((product) => (
       ProductItem key={product.id} product={product} onAddToCart={onAddToCart} />
        
-    )
-    
-  }
-
+    ))}
 
   </div>
-)
+);
+
+export default ProductList;
