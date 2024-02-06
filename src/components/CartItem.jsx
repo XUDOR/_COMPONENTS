@@ -1,11 +1,11 @@
 import React from "react";
 
-const cartItem = ({ item, onRemoveFromCart }) => (
+const CartItem = ({ item, onRemoveFromCart }) => (
   <div>
     <span>{item.name}</span>
-    <span>{item.price}</span>
-    <button onClick={() => onRemoveFromCart(item.id)}>Remove</button>
+    <span>   {item.price}</span>
+    <button onClick={() => onRemoveFromCart(item.id)}>-</button>
   </div>
 );
 
-export default cartItem;
+export default CartItem;

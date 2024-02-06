@@ -6,7 +6,7 @@ const Cart = ({cartItems, onRemoveFromCart}) => (
   <div>
     <h2>CART</h2>
     {cartItems.map((item) => (  
-      <cartItem key={item.id} item={item} onRemoveFromCart={onRemoveFromCart} />
+      <CartItem key={item.id} item={item} onRemoveFromCart={onRemoveFromCart} />
     ))}
     <Total cartItems={cartItems} />
   </div>
