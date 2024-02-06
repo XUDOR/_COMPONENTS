@@ -4,8 +4,8 @@ const Total = ({ cartItems }) => {
   const total = cartItems.reduce((acc,item) => acc + item.price, 0);
 
   return (
-    <div>
-      <h3>Total: ${total.toFixed(2)}</h3>
+    <div className="total">
+      <h3 className="total-box">Total: ${total.toFixed(2)}</h3>
     </div>
   );  
 };
