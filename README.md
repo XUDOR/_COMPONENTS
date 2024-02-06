@@ -1,3 +1,3 @@
 ### REACT_COMPONENTS
-// Cart modules
+// To do LIST > functional components
 
