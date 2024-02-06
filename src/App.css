@@ -10,7 +10,8 @@
 
 .product-tile{
   background-color: #333;
-  width: fit-content;
+  width: 100px;
+  margin-right: 20px;
 }
 .product-name{
   color: #FFFFFA;
@@ -18,9 +19,14 @@
   
 }
 
+.product-price {
+  color: #ccc;
+
+
+}
 
 .product-list {
-  border: 1px solid #ccc;
+  border: 5px solid #ccc;
 
   padding: 20px;
   width: 25%;
@@ -35,10 +41,20 @@
   cursor: pointer;
 }
 
+.add-product {
+  background-color: #000;
+  color: #ccc;
+}
+
 .cart {
   width: 300px;
-  border: 1px solid #ccc;
+  background-color: #1E1E1E;
   padding: 20px;
+}
+
+.cart-title {
+  color: #FCFBF2;
+  font-weight: normal;
 }
 
 .cart-item {
@@ -53,7 +69,7 @@
 
 
 .cart-item button {
-  background: #f00;
+  background: #706F6C;
   color: #fff;
   border: none;
   padding: 5px 10px;
@@ -66,7 +82,14 @@
 
 .total {
   border-top: 1px solid #ccc;
-  padding-top: 10px;
+  padding: 10px;
   text-align: right;
   margin-top: 10px;
+}
+.total-box {
+  background-color: #FFFADF;
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  
 }
