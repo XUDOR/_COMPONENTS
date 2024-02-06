@@ -1,37 +1,47 @@
-import React, { useState } from 'react';
-import ProductList from './components/Cart/ProductList';
-import Cart from './components/Cart/Cart';
+import React, { useState } from "react";
 import './App.css';
 
-//Product Data
-const InitialProducts = [
-  {id: 1 , name: 'Product 1', price: 29.99 },
-  {id: 2 , name: 'Product 2', price: 19.99 },
-  {id: 3 , name: 'Product 3', price: 39.99 },
-  {id: 4 , name: 'Product 4', price: 9.99 },
-];
-
-
 function App() {
-  const [products] = useState(InitialProducts);
-  const [cartItems, setCartItems] = useState([]);
+  const [tasks, setTasks] = useState([]);
+  const [task, setTask] = useState('');
 
-  const handleAddToCart = (product) => {
-    setCartItems([...cartItems, product]);
+  const addTask =() => {
+    if(!task.trim()) return; //avoid empty tasks
+    setTasks([...tasks,task]);
+    setTask(''); // clear imput after adding
   };
 
-  const handleRemoveFromCart = (productId) => {
-    setCartItems(cartItems.filter(item =>item.id!==productId)); 
+  const handleKeyPress = (e) => {
+    if (e.key === 'enter') {
+      addTask();
+    }
+  };
+
+  const removeTask = index => {
+    setTasks(tasks.filter((_,i) => i!== index));
   };
 
   return (
     <div className="app">
-      <ProductList products={products} onAddToCart={handleAddToCart} />
-      <Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />  
-      
+      <div className="todo-list">
+        <input className="input"
+        type="text"
+        value={task}
+        onChange={(e) =>setTask(e.target.value)}
+        onKeyDown={handleKeyPress} // probable fail
+        placeholder="Add new task..."
+        />
+        <button className="add" onClick={addTask}>Add Task</button>
+        <ul>
+          {tasks.map((task, index) => (
+            <li key={index}>
+              {task} <button onClick={() => removeTask(index)}>Remove</button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
-}
-
+} 
 
 export default App;
