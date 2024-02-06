@@ -1,0 +1,21 @@
+.app {
+  background-color: #FCFBF2;
+  height: 300px;
+}
+
+
+
+.input {
+  
+  display: flex;
+  border: 2px solid;
+  border-radius: 5px;
+  width: fit-content;
+  height: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+.add {
+  background-color: #D5D49C;
+}
