@@ -1,8 +1,8 @@
 import React from "react";
 
 const ProductItem = ({ product, onAddToCart }) => (
-  <div>
-    <h3>{product.name}</h3>
+  <div className="product-tile">
+    <h3 className="product-name">{product.name}</h3>
     <p>${product.price}</p>
     <button onClick={()=> onAddToCart(product)}>Add to Cart</button>
   </div>  
