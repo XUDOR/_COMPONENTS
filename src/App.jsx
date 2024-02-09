@@ -28,22 +28,26 @@ function App() {
     }
   };
 
-  const handleRemoveFromCart = (productId) => {
-    const productExists = cartItems.find((item) => item.id === productId);
-    if (productExists.quantity === 1) {
-      setCartItems(cartItems.filter((item) => item.id !== productId));
-    } else {
+  const handleDecreaseInCart = (product) => {
+    const productExists = cartItems.find((item) => item.id === product.id);
+    if (productExists && productExists.quantity > 1) {
       setCartItems(
         cartItems.map((item) =>
-          item.id === productId ? { ...productExists, quantity: productExists.quantity - 1 } : item
-        )
-      );
+        item.id === product.id ? { ...productExists, quantity: productExists.quantity -1} : item
+      )
+    );
+    } else if (productExists) {
+      setCartItems(cartItems.filter((item) => item.id !== product.id));
     }
+  };
+
+  const handleRemoveFromCart = (productId) => {
+      setCartItems(cartItems.filter((item) => item.id !== productId));
   };
 
   return (
     <div className="app">
-      <ProductList products={products} onAddToCart={handleAddToCart} />
+      <ProductList products={products} onAddToCart={handleAddToCart} onDecreaseInCart={handleDecreaseInCart}/>
       <Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />
     </div>
   );
