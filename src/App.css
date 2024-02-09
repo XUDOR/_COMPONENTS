@@ -54,10 +54,31 @@
   
 }
 
-.add-product button :hover {
+.add-product:hover {
   background-color: #CEDDC2;
+  color: #000;
 
 }
+
+
+.modify-product {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #ccc;
+  padding: 5px 10px;
+  text-align: center;
+  cursor: pointer;
+  
+}
+
+.modify-product:hover {
+  background-color: #A32E0A;
+
+}
+
+
+
+
 
 .cart {
   width: 300px;
