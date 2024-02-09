@@ -1,4 +1,5 @@
 import React from 'react';
+import Accordion from './Accordion';
 
 import './App.css';
 
@@ -15,12 +16,12 @@ const accordionData = [
   },
 ]
 
-function App() {
-  
-  
-
+function App() => {
   return (
-    <div >__ACCORDION</div>
+    <div >__ACCORDION
+    <h1>___RDX</h1>
+  <Accordion sections={accordionData}/>
+  </div>
   );
 };
 
