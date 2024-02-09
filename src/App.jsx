@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import ProductList from './components/Cart/ProductList';
-import Cart from './components/Cart/Cart';
+import React from 'react';
+
 import './App.css';
 
-// Product Data
+// Data
 const accordionData = [
   { title: "section 1",
     content: `Section ONE _____________`,
@@ -18,10 +17,10 @@ const accordionData = [
 
 function App() {
   
-  };
+  
 
   return (
-    <div ></div>
+    <div >__ACCORDION</div>
   );
 };
 
