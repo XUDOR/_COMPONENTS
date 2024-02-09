@@ -46,7 +46,9 @@ function App() {
   };
 
   return (
+    
     <div className="app">
+      
       <ProductList products={products} onAddToCart={handleAddToCart} onDecreaseInCart={handleDecreaseInCart}/>
       <Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />
     </div>
