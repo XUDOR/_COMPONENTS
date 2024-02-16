@@ -5,7 +5,11 @@
   padding: 0;
 }
 
-
+.container {
+  border: 3px solid #D8DCD2;
+  width: 250px;
+  height: 100px;
+}
 
 .titleBox {
   font-size: 64px;
