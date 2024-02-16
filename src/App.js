@@ -7,19 +7,10 @@ function App() {
   return (
     <div className="App">
       
-      <Tabs>
-        <TabPanel label="Tab 1">
-          Content for Tab 1
-        </TabPanel>
-        <TabPanel label="Tab 2">
-          Content for Tab 2
-        </TabPanel>
-        <TabPanel label="Tab 3">
-          Content for Tab 3
-        </TabPanel>
-
-      </Tabs>
-      <div>>3 TAB CONTAINER: git brach - main </div>
+      
+      <div className='text'>
+        __Form
+      </div>
     </div>
   );
 }
