@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background-color: #FFFEF5;
+  background-color: #6B7F7B;
   margin: 0;
   padding: 0;
 }
@@ -13,39 +13,10 @@
   display: flex;
   background-color: #f9f9f9;
 }
+.text {
+  font-size: 64px;
+  font-weight: 100;
+  font-family: 'Times New Roman', Times, serif;
+  color: #F7F7F5;
 
-.tab-list-item {
-  padding: 10px 20px;
-  margin-top: 10px;
-  margin-left: 10px;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-bottom: none;
-  background-color: inherit;
-}
-
-.tab-list-item:hover {
-  background-color: #ddd;
-}
-
-.tab-list-active {
-  background-color: #fff;
-  border-color: #cccccc;
-  border-bottom: 2px solid #fff;
-  top: 1px;
-}
-
-.tab-content {
-  border: 1px solid #ccc;
-  margin-left: 10px;
-  min-height: 500px;
-  width: 50%;
-  padding: 10px;
-  background-color: #fff;
-}
-
-.container {
-  border: 1px solid red;
-  min-height: 250px;
-  overflow: auto;
 }
