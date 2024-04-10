@@ -11,6 +11,9 @@ const AudioPlayer = () => {
 
   const audioPlayer = useRef(); // Reference to the audio component
 
+  // File name for display. If the audio file path is static, this can remain constant.
+  const audioFileName = "CHARLOTTA.mp3"; // Directly using the file name since the path is static
+
   // Toggles the play/pause state
   const togglePlayPause = () => {
     const prevValue = isPlaying;
@@ -30,7 +33,6 @@ const AudioPlayer = () => {
 
   // Updates the current time as the audio plays
   const handleTimeUpdate = () => {
-    // Only update if not seeking to avoid conflicts
     if (!isSeeking) {
       setCurrentTime(audioPlayer.current.currentTime);
     }
@@ -79,27 +81,28 @@ const AudioPlayer = () => {
         onTimeUpdate={handleTimeUpdate}
         onEnded={() => setIsPlaying(false)}
       ></audio>
+      <div className="audio-file-name">
+        Now Playing: {audioFileName} {/* Display the file name */}
+      </div>
       <button className="Play" onClick={togglePlayPause}>
         {isPlaying ? 'Pause' : 'Play'}
       </button>
       <div className="Time">
         {calculateTime(currentTime)} / {calculateTime(duration)}
       </div>
-      {/* Seek Bar */}
       <div className="seek-control">
-      <input
-        type="range"
-        min="0"
-        max={duration}
-        value={isSeeking ? undefined : currentTime}
-        onChange={handleSeekChange}
-        onMouseDown={handleSeekMouseDown}
-        onMouseUp={handleSeekMouseUp}
-        className="seek-slider"
-        step="1"
-      />
+        <input
+          type="range"
+          min="0"
+          max={duration}
+          value={isSeeking ? undefined : currentTime}
+          onChange={handleSeekChange}
+          onMouseDown={handleSeekMouseDown}
+          onMouseUp={handleSeekMouseUp}
+          className="seek-slider"
+          step="1"
+        />
       </div>
-      {/* Volume Control */}
       <div className="volume-control">
         <input
           type="range"
