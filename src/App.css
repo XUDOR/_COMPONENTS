@@ -5,6 +5,16 @@ body {
   padding: 15px; /* Padding around the entire body */
 }
 
+
+.audio-file-name{
+  padding: 10px;
+  flex: 20%;
+  color: #083D5E;
+  background: #3AA0A0;
+
+}
+
+
 .player {
   display: flex; /* This line is crucial for horizontal layout */
   color: #F9F7E8;
@@ -13,7 +23,7 @@ body {
   padding: 5px;
   font-size: 15px;
   border: 2px solid #083D5E;
-  max-width: 600px; /* Adjust based on your preference */
+  max-width: 700px; /* Adjust based on your preference */
 }
 
 .Play, .Time, .volume-control { /* Corrected class name for consistency */
