@@ -1,3 +1,5 @@
+//app.js
+
 import React from 'react';
 import './App.css';
 import AudioPlayer from './components/Audio/AudioPlayer'; // Removed .jsx for brevity
