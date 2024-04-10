@@ -5,8 +5,8 @@ import AudioPlayer from './components/Audio/AudioPlayer'; // Removed .jsx for br
 function App() {
   return (
     <div className="App">
-      <header className='player'> {/* Adjusted for potential semantic and stylistic purposes */}
-        Audio Player 
+       Audio Player 
+      <header className='playerContainer'> {/* Adjusted for potential semantic and stylistic purposes */}
         <AudioPlayer />
       </header>
     </div>
