@@ -1,15 +1,68 @@
-/* Apply the background to the body for a consistent application */
 body {
   background-color: #617068;
   color: #F9F7E8;
-  margin: 0; /* Removes default browser margin */
-  padding: 0; /* Removes default browser padding */
-  font-family: sans-serif; /* Optional: Defines a default font family */
+  margin: 0; /* Consider removing the default margin */
+  padding: 15px; /* Padding around the entire body */
 }
 
 .player {
-  margin: 10px;
-  padding: 1px; /* Added unit */
-  font-size: 30px;
-  border: 3px solid #27332D;
+  display: flex; /* This line is crucial for horizontal layout */
+  color: #F9F7E8;
+  margin: 10px auto; /* Center your player horizontally */
+  padding: 10px;
+  font-size: 15px;
+  border: 2px solid #083D5E;
+  max-width: 600px; /* Adjust based on your preference */
 }
+
+.Play, .Time, .volume-control { /* Corrected class name for consistency */
+  
+  align-items: left; /* Ensure vertical center alignment */
+  margin-left: 5px;
+}
+
+.Time {
+  border: 2px solid #3AA0A0;
+  margin-right: 20px; /* Adjust spacing between elements */
+  padding: 5px; /* Added padding for visual space */
+}
+
+.Play {
+  border: 1px solid gray;
+  padding: 10px;
+  cursor: pointer; /* Suggest interaction */
+}
+
+.volume-control {
+  display: flex; /* Ensures flex properties apply */
+  flex-grow: 1;
+  align-items: center; /* Align the slider within this control */
+  margin-left: 10px; /* Space out from preceding elements */
+  max-width: 200px; /* Control the max width of your volume slider */
+}
+
+.volume-slider {
+
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80%;
+  height: 5px;
+  background: #F9F7E8;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.volume-slider:hover {
+  opacity: 1;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #3AA0A0;
+  cursor: pointer;
+}
+
