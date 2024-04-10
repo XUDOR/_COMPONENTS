@@ -1,5 +1,5 @@
 body {
-  background-color: #617068;
+  background-color: #083D5E;
   color: #F9F7E8;
   margin: 0; /* Consider removing the default margin */
   padding: 15px; /* Padding around the entire body */
@@ -8,6 +8,7 @@ body {
 .player {
   display: flex; /* This line is crucial for horizontal layout */
   color: #F9F7E8;
+  background-color: gray;
   margin: 10px auto; /* Center your player horizontally */
   padding: 5px;
   font-size: 15px;
@@ -29,9 +30,11 @@ body {
 }
 
 .Play {
-  border: 1px solid gray;
+  background-color: #083D5E;
+  border: 1px solid #F9F7E8;
+  color: #3AA0A0;
   padding: 5px;
-  width: 15%;
+  width: 10%;
   cursor: pointer; /* Suggest interaction */
 }
 
